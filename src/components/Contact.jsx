@@ -1,8 +1,11 @@
 import emailjs from "@emailjs/browser";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Contact = () => {
   const [showModal, setShowModal] = useState(false)
+  const inputName = useRef("")
+  const inputEmail = useRef("")
+  const inputMessage = useRef("")
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,6 +22,10 @@ const Contact = () => {
         setShowModal(true)
       })
       .catch((err) => console.log(err));
+
+      inputName.current.value="";
+      inputEmail.current.value="";
+      inputMessage.current.value="";
   };
 
   useEffect(()=>{
@@ -43,18 +50,21 @@ const Contact = () => {
         <label htmlFor="">Your Name</label>
         <input
           name="from_name"
+          ref={inputName}
           className="w-full px-3 py-1 my-2 bg-transparent bg-dav-light-gray rounded-lg border border-dav-green"
           type="text"
         />
         <label htmlFor="">Your e-mail</label>
         <input
           name="email"
+          ref={inputEmail}
           className="w-full px-3 py-1 my-2 bg-transparent bg-dav-light-gray rounded-lg border border-dav-green"
           type="text"
         />
         <label htmlFor="">Your message</label>
         <textarea
           name="message"
+          ref={inputMessage}
           className="w-full px-3 py-1 my-2 bg-transparent bg-dav-light-gray rounded-lg border border-dav-green"
           id=""
           cols="30"
