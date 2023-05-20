@@ -20,7 +20,6 @@ const Contact = () => {
       })
       .catch((err) => console.log(err));
   };
-console.log(import.meta.env.VITE_APP_SERVICE_ID)
 
   useEffect(()=>{
     if(showModal===true){
