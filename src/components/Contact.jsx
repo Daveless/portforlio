@@ -14,12 +14,12 @@ const Contact = () => {
         e.target,
         import.meta.env.VITE_APP_PUBLIC_KEY
       )
-      .then(() => {
+      .then((res) => {
+        console.log(res.text)
         setShowModal(true)
       })
       .catch((err) => console.log(err));
   };
-
 
   useEffect(()=>{
     if(showModal===true){
