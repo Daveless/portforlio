@@ -3,7 +3,7 @@ import animationData from "../assets/skills.json"
 
 const Section2 = () => {
   return (
-    <section className="w-[80%] max-w-[800px] m-auto">
+    <section id="Skills" className="w-[80%] max-w-[800px] m-auto">
       <div className="flex flex-row items-center w-[80%] gap-2">
         <span className="flex text-dav-green text-2xl">
           #

@@ -2,7 +2,7 @@ import {works} from "../assets/db/projectsDb"
 import Card from "./Card"
 const Section3 = () => {
   return (
-    <section className="w-[80%] m-auto text-white max-w-[1200px]">
+    <section id="Projects" className="w-[80%] m-auto text-white max-w-[1200px]">
         <div className="flex flex-row items-center w-[80%] gap-2">
         <span className="flex text-dav-green text-2xl">
           #

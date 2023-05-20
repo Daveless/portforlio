@@ -11,8 +11,8 @@ const Card = ({work}) => {
             <h3 className="text-xl text-white">{work.name}</h3>
             <p className="py-4">{work.description}</p>
             <div className="w-full flex gap-2 justify-around">
-                <a className="w-[8rem] text-center py-1 px-6 border border-dav-green" href={work.webSite}>Live</a>
-                <a className="w-[8rem] text-center py-1 px-6 border border-dav-green" href={work.repositoryLink}>Repository</a>
+                <a className="w-[8rem] text-center py-1 px-6 border border-dav-green hover:bg-dav-green hover:text-black transition-colors delay-150" target="_blank" rel="noreferrer" href={work.webSite}>Live</a>
+                <a className="w-[8rem] text-center py-1 px-6 border border-dav-green hover:bg-dav-green hover:text-black transition-colors delay-150" target="_blank" rel="noreferrer" href={work.repositoryLink}>Repository</a>
             </div>
         </div>
     </div>
