@@ -1,12 +1,14 @@
 import Lottie from "lottie-react";
 import animationData from "../assets/skills.json";
+import { useSelector } from "react-redux";
 
 const Section2 = () => {
+  const isEng = useSelector((state) => state.languageReducer.isEng);
   return (
     <section id="Skills" className="w-[80%] max-w-[800px] m-auto">
       <div className="flex flex-row items-center w-[80%] gap-2">
         <span className="flex text-dav-green text-2xl">
-          #<h2 className="text-white">Skills</h2>
+          #<h2 className="text-white">{isEng ? "Skills" : "Habilidades"}</h2>
         </span>
         <hr className="h-[1px] border-dav-green bg-dav-green w-full" />
       </div>
@@ -18,7 +20,7 @@ const Section2 = () => {
         <div className="grid grid-cols-2 md:grid-cols-1 md:w-full gap-3 md:gap-5 text-white">
           <div className="flex flex-col border border-dav-border-gray w-full">
             <div className="border border-dav-border-gray py-1 px-2">
-              Languages
+              {isEng ? "Languages" : "Lenguajes"}
             </div>
             <div className="p-2">
               <p className="text-dav-border-gray">Javascript</p>
@@ -40,7 +42,9 @@ const Section2 = () => {
             </div>
           </div>
           <div className="flex flex-col border border-dav-border-gray w-full">
-            <div className="border border-dav-border-gray py-1 px-2">Other</div>
+            <div className="border border-dav-border-gray py-1 px-2">
+              {isEng ? "Other" : "Otros"}
+            </div>
             <div className="p-2">
               <p className="text-dav-border-gray">Git/Github</p>
               <p className="text-dav-border-gray">Sequelize</p>
