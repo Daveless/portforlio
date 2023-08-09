@@ -51,7 +51,7 @@ const Section1 = () => {
             </a>
             <a
               className="border border-dav-green hover:bg-dav-green hover:text-black transition-colors delay-150 px-5 py-1 mt-4 md:mt-8"
-              href={isEng ? "/CV_ESP.pdf" : "/CV_ENG.pdf"}
+              href={isEng ? "/CV_ENG.pdf" : "/CV_ESP.pdf"}
               download={"CV David Rojas"}
             >
               {isEng ? "Download CV" : "Descargar CV"}
